@@ -1,0 +1,53 @@
+<?php
+
+/**
+ * @file
+ * Contains day_05_drupal_8_block_system.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function day_05_drupal_8_block_system_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the day_05_drupal_8_block_system module.
+    case 'help.page.day_05_drupal_8_block_system':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Day 05 ­ Drupal 8 Block System') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+function day_05_drupal_8_block_system_cron(){
+
+  // Get blocks list
+  $blocks = \Drupal::entityTypeManager()
+    ->getStorage('block_content')
+    ->loadByProperties(array('type' => 'stock_exchange_rate_card'));
+
+  foreach($blocks as $key => $block) {
+    // Get field_symbol value.
+    $block_symbol = $block->field_symbol->value;
+
+    // Create GuzzleHttp object.
+    $client = \Drupal::httpClient();
+
+    // Get the response.
+    $response = $client->request('GET', 'http://dev.markitondemand.com/MODApis/Api/v2/Quote/json?symbol=' . $block_symbol);
+    $data = json_decode($response->getBody()->getContents());
+
+    // Assign values
+    $block->field_last_price->value = $data->LastPrice;
+    $block->field_change->value = $data->Change;
+
+    // Save block
+    $block->save();
+  }
+
+}

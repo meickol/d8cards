@@ -1,0 +1,5 @@
+name: Day 05 - Drupal 8 block system
+type: module
+description: Day 05 ­ Drupal 8 Block System
+core: 8.x
+package: d8cards

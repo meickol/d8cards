@@ -1,0 +1,8 @@
+
+day_05_drupal_8_block_system.default_controller_test:
+  path: 'test'
+  defaults:
+    _controller: '\Drupal\day_05_drupal_8_block_system\Controller\DefaultController::test'
+    _title: 'test'
+  requirements:
+    _permission: 'access content'

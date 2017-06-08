@@ -3,6 +3,10 @@ sites/*/files
 sites/*/private
 files/*
 
+sites/d8cert_maicoll.dd
+sites/sites.php
+
+
 # Pantheon commits a settings.php for environment-specific settings.
 # Place local settings in settings.local.php
 sites/*/settings.local.php
@@ -57,3 +61,4 @@ Thumbs.db
 # Things in the core directory that Drupal 8 commits in the repository.
 !core/**/*.gz
 
+.idea
