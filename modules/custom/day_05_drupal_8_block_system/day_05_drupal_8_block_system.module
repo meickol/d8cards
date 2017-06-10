@@ -35,19 +35,25 @@ function day_05_drupal_8_block_system_cron(){
     // Get field_symbol value.
     $block_symbol = $block->field_symbol->value;
 
-    // Create GuzzleHttp object.
-    $client = \Drupal::httpClient();
+    try {
+      // Create GuzzleHttp object.
+      $client = \Drupal::httpClient();
 
-    // Get the response.
-    $response = $client->request('GET', 'http://dev.markitondemand.com/MODApis/Api/v2/Quote/json?symbol=' . $block_symbol);
-    $data = json_decode($response->getBody()->getContents());
+      // Get the response.
+      $response = $client->request('GET', 'http://dev.markitondemand.com/MODApis/Api/v2/Quote/json?symbol=' . $block_symbol);
+      $data = json_decode($response->getBody()->getContents());
 
-    // Assign values
-    $block->field_last_price->value = $data->LastPrice;
-    $block->field_change->value = $data->Change;
+      // Assign values
+      $block->field_last_price->value = $data->LastPrice;
+      $block->field_change->value = $data->Change;
 
-    // Save block
-    $block->save();
+      // Save block
+      $block->save();
+    }
+    catch (RequestException $e) {
+      watchdog_exception('day_05_drupal_8_block_system', $e->getMessage());
+    }
+
   }
 
 }
