@@ -5,6 +5,7 @@ files/*
 
 sites/d8cert_maicoll.dd
 sites/sites.php
+sites/default/services.yml
 
 
 # Pantheon commits a settings.php for environment-specific settings.
