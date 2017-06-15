@@ -31,14 +31,14 @@ function day_05_drupal_8_block_system_cron(){
     ->getStorage('block_content')
     ->loadByProperties(array('type' => 'stock_exchange_rate_card'));
 
+  // Create GuzzleHttp object.
+  $client = \Drupal::httpClient();
+
   foreach($blocks as $key => $block) {
     // Get field_symbol value.
     $block_symbol = $block->field_symbol->value;
 
     try {
-      // Create GuzzleHttp object.
-      $client = \Drupal::httpClient();
-
       // Get the response.
       $response = $client->request('GET', 'http://dev.markitondemand.com/MODApis/Api/v2/Quote/json?symbol=' . $block_symbol);
       $data = json_decode($response->getBody()->getContents());
