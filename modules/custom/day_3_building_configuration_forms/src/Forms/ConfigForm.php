@@ -6,11 +6,15 @@ use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Class ConfigForm
+ * Class ConfigForm.
  *
  * @package Drupal\day_3_building_configuration_forms\Forms
  */
 class ConfigForm extends ConfigFormBase {
+
+  /**
+   * {@inheritdoc}
+   */
   protected function getEditableConfigNames() {
     return ['day_3_building_configuration_forms.my_config_module'];
   }
@@ -30,7 +34,7 @@ class ConfigForm extends ConfigFormBase {
 
     $form['name'] = [
       '#type' => 'textfield',
-      '#title' => t('Name'),
+      '#title' => $this->t('Name'),
       '#default_value' => $config->get('name'),
       '#required' => TRUE,
     ];
@@ -38,7 +42,7 @@ class ConfigForm extends ConfigFormBase {
     $options = [9, 10, 11, 12];
     $form['shoe_size'] = [
       '#type' => 'select',
-      '#title' => t('Shoe Size'),
+      '#title' => $this->t('Shoe Size'),
       '#default_value' => $config->get('shoe_size'),
       '#options' => $options,
       '#required' => TRUE,
@@ -47,17 +51,16 @@ class ConfigForm extends ConfigFormBase {
     $gender_options = [
       'F' => $this->t('F'),
       'M' => $this->t('M'),
-      'Other' => $this->t('Other')
+      'Other' => $this->t('Other'),
     ];
 
     $form['gender'] = [
       '#type' => 'radios',
-      '#title' => t('Gender'),
+      '#title' => $this->t('Gender'),
       '#options' => $gender_options,
       '#default_value' => $config->get('gender'),
       '#required' => TRUE,
     ];
-
 
     return parent::buildForm($form, $form_state);
   }
@@ -74,7 +77,7 @@ class ConfigForm extends ConfigFormBase {
 
     $config->save();
 
-    drupal_set_message(t('Your configurations have been saved.'));
+    drupal_set_message($this->t('Your configurations have been saved.'));
 
     parent::submitForm($form, $form_state);
   }
