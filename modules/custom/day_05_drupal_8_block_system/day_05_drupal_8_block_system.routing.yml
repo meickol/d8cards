@@ -1,4 +1,3 @@
-
 day_05_drupal_8_block_system.default_controller_test:
   path: 'test'
   defaults:

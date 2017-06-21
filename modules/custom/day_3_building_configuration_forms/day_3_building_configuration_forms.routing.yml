@@ -1,0 +1,7 @@
+day_3_building_configuration_forms.my_config_module:
+  path: 'day_3_building_configuration_forms/config'
+  defaults:
+    _form: 'Drupal\day_3_building_configuration_forms\Forms\ConfigForm'
+    _title: 'Day 03 ­ Building Configuration forms - Config Page'
+  requirements:
+    _permission: 'administer content'

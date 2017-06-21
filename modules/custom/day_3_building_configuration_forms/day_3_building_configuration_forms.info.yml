@@ -1,0 +1,5 @@
+name: Day 03 ­ Building Configuration forms
+type: module
+description: Day 03 ­ Building Configuration forms
+core: 8.x
+package: d8cards
