@@ -1,0 +1,25 @@
+uuid: b021ec49-d5d8-405f-828b-cdaaa40ad7d8
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:stock_exchange_rate_card:0cc465f1-72e7-4dd1-ab02-61da7e72b09d'
+  module:
+    - block_content
+  theme:
+    - d8cert_maicoll
+id: d8cert_maicoll_transocean
+theme: d8cert_maicoll
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'block_content:0cc465f1-72e7-4dd1-ab02-61da7e72b09d'
+settings:
+  id: 'block_content:0cc465f1-72e7-4dd1-ab02-61da7e72b09d'
+  label: Transocean
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

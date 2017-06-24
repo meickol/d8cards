@@ -1,0 +1,22 @@
+uuid: c99a12d0-a77f-4dc2-8b1c-fd80fbeb90f5
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - d8cert_maicoll
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: d8cert_maicoll_messages
+theme: d8cert_maicoll
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

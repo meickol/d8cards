@@ -1,0 +1,25 @@
+uuid: 76c65533-f17c-4da6-a989-aba5da42c12b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:stock_exchange_rate_card:c0b98d75-eb70-4aec-9748-ffe4d0d98b41'
+  module:
+    - block_content
+  theme:
+    - d8cert_maicoll
+id: d8cert_maicoll_bankofamerica
+theme: d8cert_maicoll
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'block_content:c0b98d75-eb70-4aec-9748-ffe4d0d98b41'
+settings:
+  id: 'block_content:c0b98d75-eb70-4aec-9748-ffe4d0d98b41'
+  label: 'Bank of America'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

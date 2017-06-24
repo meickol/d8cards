@@ -1,0 +1,25 @@
+uuid: 6923f3e6-3a98-4cf4-9603-0c8d4d5cdf35
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:stock_exchange_rate_card:da78a926-6762-4ccb-8a8e-34f378ffe9a3'
+  module:
+    - block_content
+  theme:
+    - d8cert_maicoll
+id: d8cert_maicoll_apple
+theme: d8cert_maicoll
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'block_content:da78a926-6762-4ccb-8a8e-34f378ffe9a3'
+settings:
+  id: 'block_content:da78a926-6762-4ccb-8a8e-34f378ffe9a3'
+  label: Apple
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

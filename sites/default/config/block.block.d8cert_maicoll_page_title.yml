@@ -1,0 +1,20 @@
+uuid: 5fe38503-d1d9-4770-b9f7-ceedc684e3ea
+langcode: en
+status: true
+dependencies:
+  theme:
+    - d8cert_maicoll
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: d8cert_maicoll_page_title
+theme: d8cert_maicoll
+region: content
+weight: -9
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

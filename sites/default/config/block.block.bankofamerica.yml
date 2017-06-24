@@ -1,0 +1,25 @@
+uuid: 005e2fd0-9569-4793-b15c-53dfa703eba4
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:stock_exchange_rate_card:c0b98d75-eb70-4aec-9748-ffe4d0d98b41'
+  module:
+    - block_content
+  theme:
+    - bartik
+id: bankofamerica
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'block_content:c0b98d75-eb70-4aec-9748-ffe4d0d98b41'
+settings:
+  id: 'block_content:c0b98d75-eb70-4aec-9748-ffe4d0d98b41'
+  label: 'Bank of America'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

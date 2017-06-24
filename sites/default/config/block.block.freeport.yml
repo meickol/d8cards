@@ -1,0 +1,25 @@
+uuid: 42cbb0bd-8aea-4fe2-b9dc-8aadd333bcc9
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:stock_exchange_rate_card:7664002b-39db-4c2e-80cd-c36524f13553'
+  module:
+    - block_content
+  theme:
+    - bartik
+id: freeport
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'block_content:7664002b-39db-4c2e-80cd-c36524f13553'
+settings:
+  id: 'block_content:7664002b-39db-4c2e-80cd-c36524f13553'
+  label: Freeport
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

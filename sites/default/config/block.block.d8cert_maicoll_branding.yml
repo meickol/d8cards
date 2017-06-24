@@ -1,0 +1,25 @@
+uuid: b3a3d593-cce3-454a-b9a7-cdb71e197acb
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - d8cert_maicoll
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: d8cert_maicoll_branding
+theme: d8cert_maicoll
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

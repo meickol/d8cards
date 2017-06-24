@@ -1,0 +1,22 @@
+uuid: 848e09e2-2055-4dd5-8e6b-ac928b473002
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - d8cert_maicoll
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: d8cert_maicoll_powered
+theme: d8cert_maicoll
+region: sidebar_first
+weight: -9
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: f4379d77-30f0-46a2-a73f-69e40448f665
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - d8cert_maicoll
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: d8cert_maicoll_content
+theme: d8cert_maicoll
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }
