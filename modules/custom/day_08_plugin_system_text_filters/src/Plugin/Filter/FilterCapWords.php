@@ -21,10 +21,8 @@ class FilterCapWords extends FilterBase{
     $words = explode(', ', $words);
 
     foreach($words as $key => $value){
-      dump($value);
       $new_value = strtoupper($value);
       $text = str_replace($value, $new_value, $text);
-      dump($text);
     }
 
     return new FilterProcessResult($text);
