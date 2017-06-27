@@ -1,0 +1,5 @@
+name: Day 08 - Plugin system - text filters
+type: module
+core: 8.x
+description: Day 08 - Plugin system - text filters
+package: d8cards
