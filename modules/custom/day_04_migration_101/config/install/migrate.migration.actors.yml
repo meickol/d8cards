@@ -1,0 +1,49 @@
+id: moviesc
+label: Import Movies
+migration_groups:
+  - D8 Cards
+
+source:
+  plugin: csv
+  # Full path to the file.
+  path: 'import-day-04/movies.csv'
+  # Column delimiter. Comma (,) by default.
+  delimiter: ','
+  # Field enclosure. Double quotation marks (") by default.
+  enclosure: '"'
+  # The number of rows at the beginning which are not data.
+  header_row_count: 1
+  keys:
+    - id
+  # Here we identify the columns of interest in the source file.
+  # Each numeric key is the 0-based index of the column.
+  # For each column, the key below is the field name assigned to
+  # the data on import, to be used in field mappings below.
+  # The value is a user-friendly string for display by the
+  # migration UI.
+  column_names:
+    0:
+      id: 'id'
+    1:
+      title: 'title'
+    2:
+      plot: 'plot'
+    3:
+      actors: 'actors'
+    4:
+      genre: 'genre'
+process:
+  title: title
+  body: plot
+  type:
+    plugin: default_value
+    default_value: movie
+  actors:
+    plugin: migration
+    migration: actors
+    source: actors
+destination:
+  plugin: entity:node
+migration_dependencies:
+ required:
+  - actors

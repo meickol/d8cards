@@ -13,6 +13,7 @@ module:
   contextual: 0
   datetime: 0
   day_05_drupal_8_block_system: 0
+  day_08_plugin_system_text_filters: 0
   day_3_building_configuration_forms: 0
   dblog: 0
   devel: 0

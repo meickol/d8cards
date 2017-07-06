@@ -1,7 +1,9 @@
 uuid: d6fe3020-cad9-47fc-a713-fbbc3414ab8c
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - day_08_plugin_system_text_filters
 _core:
   default_config_hash: KUjJ8Ti_ZJSlhGM88E_mhJP-8mmQRNUB6RFof615Kt0
 name: 'Restricted HTML'
@@ -30,3 +32,10 @@ filters:
     weight: 0
     settings:
       filter_url_length: 72
+  filter_cap_words:
+    id: filter_cap_words
+    provider: day_08_plugin_system_text_filters
+    status: true
+    weight: 0
+    settings:
+      caps_words_list: 'drupal, joomla, wordpress'
