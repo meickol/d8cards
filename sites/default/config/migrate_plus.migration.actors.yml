@@ -1,0 +1,32 @@
+uuid: 37a190ef-ab09-4e31-a0cf-658521f4e20f
+langcode: en
+status: true
+dependencies: {  }
+id: actors
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: null
+label: 'Import Actors'
+source:
+  plugin: csv
+  path: import-day-04/movies.csv
+  delimiter: ','
+  enclosure: '"'
+  header_row_count: 1
+  keys:
+    - id
+  column_names:
+    -
+      id: id
+    -
+      title: title
+process:
+  title: title
+  type:
+    plugin: default_value
+    default_value: actor
+destination:
+  plugin: 'entity:node'
+migration_dependencies: null

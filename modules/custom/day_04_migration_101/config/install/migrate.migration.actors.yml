@@ -1,5 +1,5 @@
-id: moviesc
-label: Import Movies
+id: actors
+label: Import Actors
 migration_groups:
   - D8 Cards
 
@@ -34,16 +34,9 @@ source:
       genre: 'genre'
 process:
   title: title
-  body: plot
   type:
     plugin: default_value
-    default_value: movie
-  actors:
-    plugin: migration
-    migration: actors
-    source: actors
+    default_value: actor
+
 destination:
   plugin: entity:node
-migration_dependencies:
- required:
-  - actors
