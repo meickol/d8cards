@@ -3,10 +3,9 @@ sites/*/files
 sites/*/private
 files/*
 
-sites/d8cert_maicoll.dd
-sites/sites.php
-sites/default/services.yml
-
+# Avoid accidental modification of pantheon.upstream.yml in sites
+# created from this upstream
+pantheon.upstream.yml
 
 # Pantheon commits a settings.php for environment-specific settings.
 # Place local settings in settings.local.php
