@@ -1,17 +1,17 @@
-uuid: 37a190ef-ab09-4e31-a0cf-658521f4e20f
+uuid: 3615ebbe-6a76-445e-8a3c-1be144db63fb
 langcode: en
 status: true
 dependencies: {  }
-id: actors
+id: actorss
 class: null
 field_plugin_method: null
 cck_plugin_method: null
 migration_tags: null
-migration_group: null
+migration_group: 'D8 Cards'
 label: 'Import Actors'
 source:
   plugin: csv
-  path: import-day-04/movies.csv
+  path: import-day-04/actors.csv
   delimiter: ','
   enclosure: '"'
   header_row_count: 1

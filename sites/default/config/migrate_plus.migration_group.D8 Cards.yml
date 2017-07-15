@@ -1,0 +1,10 @@
+uuid: 2fa8e97c-efdf-4596-a81a-08376a0f690a
+langcode: en
+status: true
+dependencies: {  }
+id: 'D8 Cards'
+label: 'D8 Cards'
+description: ''
+source_type: null
+module: null
+shared_configuration: null

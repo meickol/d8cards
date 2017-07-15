@@ -1,0 +1,59 @@
+uuid: ece409f0-fb49-431a-9366-2c549719af4d
+langcode: en
+status: true
+dependencies: {  }
+id: movies
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: 'D8 Cards'
+label: 'Import Movies'
+source:
+  plugin: csv
+  path: import-day-04/movies.csv
+  delimiter: ','
+  enclosure: '"'
+  header_row_count: 1
+  keys:
+    - id
+  column_names:
+    -
+      id: id
+    -
+      title: title
+    -
+      plot: plot
+    -
+      actors: actors
+    -
+      genre: genre
+process:
+  title: title
+  field_plot: plot
+  field_actors:
+    -
+      plugin: explode
+      source: actors
+      limit: 100
+      delimiter: ','
+    -
+      plugin: migration_lookup
+      migration: actorss
+      no_stub: true
+  field_genres:
+    -
+      plugin: explode
+      source: genre
+      delimiter: ' | '
+    -
+      plugin: entity_generate
+      entity_type: taxonomy_term
+  type:
+    plugin: default_value
+    default_value: movie
+destination:
+  plugin: 'entity:node'
+migration_dependencies:
+  required:
+    - actorss
