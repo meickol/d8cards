@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Implements hook_node_presave().
+ */
+function day_13_logggin_in_d8_node_update(\Drupal\node\Entity\Node $node) {
+
+    \Drupal::logger('Node Updates')->notice('Node with title %NODE_TITLE% of type
+%NODE_TYPE% has been updated',
+      [
+        '%NODE_TITLE%' => $node->getTitle(),
+        '%NODE_TYPE%' => $node->getType()
+      ]);
+}
