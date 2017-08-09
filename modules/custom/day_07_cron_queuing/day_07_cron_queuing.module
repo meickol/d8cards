@@ -1,0 +1,35 @@
+<?php
+
+use \Drupal\user\Entity\User;
+
+/**
+ * Implements hook_entity_insert().
+ *
+ * @param \Drupal\user\Entity\User $user
+ */
+function day_07_cron_queuing_user_insert(User $user) {
+
+  // Get queue.
+  $queue = \Drupal::queue('email_cron_queue');
+
+  // Get user id
+  $uid = $user->id();
+
+  // add user id
+  $item = (object) ['uid' => $uid];
+
+  // Create item to queue.
+  $queue->createItem($item);
+
+}
+
+
+/**
+ * Implements hook_mail().
+ */
+function day_07_cron_queuing_mail($key, &$message, $params) {
+
+  $message['subject'] = $params['subject'];
+  $message['body'][] = $params['body'];
+
+}

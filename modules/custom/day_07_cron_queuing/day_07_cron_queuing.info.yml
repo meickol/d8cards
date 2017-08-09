@@ -1,0 +1,5 @@
+name: Day 07 ­ Cron Queuing
+type: module
+core: 8.x
+description: Day 07 ­ Cron Queuing
+package: d8cards

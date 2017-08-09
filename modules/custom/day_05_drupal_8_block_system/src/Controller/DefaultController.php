@@ -14,31 +14,30 @@ class DefaultController extends ControllerBase {
   /**
    * Test.
    *
-   * @return string
+   * @return array
    *   Return Hello string.
    */
   public function test() {
 
+    // Get queue.
+    $queue = \Drupal::queue('email_cron_queue');
 
-    // Get blocks list
-    $blocks = \Drupal::entityTypeManager()
-      ->getStorage('block_content')
-      ->loadByProperties(array('type' => 'stock_exchange_rate_card'));
+    // Get user id
+    $uid = 22;
+
+    // add user id
+    $item = (object) ['uid' => $uid];
+
+    // Create item to queue.
+    $queue->createItem($item);
 
 
-
-      // Get field_symbol value.
-      $block_symbol = $blocks[1]->field_symbol->value;
-      //dump($blocks[1]->field_symbol);
-
-    $admin_information = \Drupal::config('day_3_building_configuration_forms.my_config_module');
-
-    dump($admin_information->get('gender'));
 
     return [
       '#type' => 'markup',
-      '#markup' => $this->t('Admin Name is @name; Admin shoe size is @shoe_size; Admin gender is @gender', ['@name' => $admin_information->get('name'),'@shoe_size' => $admin_information->get('shoe_size'),'@gender' => $admin_information->get('gender')]),
+      '#markup' => $this->t('Admin Name is @name;', ['@name' => $uid]),
     ];
+
   }
 
 }
