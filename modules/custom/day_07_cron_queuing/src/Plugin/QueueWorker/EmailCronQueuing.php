@@ -8,7 +8,6 @@
 
 namespace Drupal\day_07_cron_queuing\Plugin\QueueWorker;
 
-
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Queue\QueueWorkerBase;
 use Drupal\user\Entity\User;
@@ -53,7 +52,7 @@ class EmailCronQueuing extends QueueWorkerBase implements ContainerFactoryPlugin
    *   The plugin implementation definition.
    * @param \Drupal\Core\Mail\MailManagerInterface $mail_manager
    *  The mail manager.
-   * * @param \Drupal\Core\Logger\LoggerChannelFactoryInterface $logger_manager
+   * @param \Drupal\Core\Logger\LoggerChannelFactoryInterface $logger_manager
    *  The logger manager.
    *
    */
@@ -75,9 +74,7 @@ class EmailCronQueuing extends QueueWorkerBase implements ContainerFactoryPlugin
   }
 
   public function processItem($data) {
-
     $user = User::load($data->uid);
-
     $module = 'day_07_cron_queuing';
     $key = 'create_user';
     $to = $user->getEmail();
@@ -95,6 +92,7 @@ class EmailCronQueuing extends QueueWorkerBase implements ContainerFactoryPlugin
       drupal_set_message($message);
 
     }
+
     $this->loggerManager->get('day_07_cron_queuing')->notice($message);
 
   }
