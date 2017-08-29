@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains day_11_creating_a_custom_d8_content_entity_type.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function day_11_creating_a_custom_d8_content_entity_type_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the day_11_creating_a_custom_d8_content_entity_type module.
+    case 'help.page.day_11_creating_a_custom_d8_content_entity_type':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Day 11 ­ Creating a Custom D8 Content Entity Type') . '</p>';
+      return $output;
+
+    default:
+  }
+}
