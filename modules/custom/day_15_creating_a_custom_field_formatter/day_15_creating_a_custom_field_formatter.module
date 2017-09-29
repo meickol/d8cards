@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function day_15_creating_a_custom_field_formatter_theme() {
+  return [
+    'five_star_formatter' => [
+      'variables' => [
+        'raitingValue' => NULL
+      ],
+    ]
+  ];
+}
+
+

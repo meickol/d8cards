@@ -1,0 +1,5 @@
+name: Day 15 - Creating a Custom Field Formatter
+type: module
+core: 8.x
+description: Day 15 - Creating a Custom Field Formatter
+package: d8cards
