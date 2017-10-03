@@ -1,0 +1,17 @@
+.rating_bar {
+  /*this class creats 5 stars bar with empty stars */
+  /*each star is 16 px, it means 5 stars will make 80px together */
+  width: 80px;
+  /*height of empty star*/
+  height: 16px;
+  /*background image with stars */
+  background: url(../images/stars.png)  0 0 repeat-x;
+  /* align inner div to the left */
+  text-align: left;
+}
+.rating {
+  /* height of full star is the same, we won't specify width here */
+  height: 16px;
+  /* background image with stars */
+  background: url(../images/stars.png)  0 -16px repeat-x;
+}

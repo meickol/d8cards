@@ -1,0 +1,8 @@
+fotorama_gallery:
+  css:
+    component:
+      /libraries/fotorama/fotorama.css: {}
+  js:
+    /libraries/fotorama/fotorama.js: {}
+  dependencies:
+    - core/jquery

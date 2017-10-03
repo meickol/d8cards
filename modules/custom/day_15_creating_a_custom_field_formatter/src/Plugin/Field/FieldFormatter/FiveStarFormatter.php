@@ -28,29 +28,15 @@ class FiveStarFormatter extends DecimalFormatter {
   /**
    * {@inheritdoc}
    */
-  public function settingsForm(array $form, FormStateInterface $form_state) {
-    return [];
-  }
-  /**
-   * {@inheritdoc}
-   */
-  public static function defaultSettings() {
-    return [];
-  }
-
-  /**
-   * {@inheritdoc}
-   */
   public function viewElements(FieldItemListInterface $items, $langcode) {
     $elements = [];
 
     foreach ($items as $delta => $item) {
-      $output = $this->numberFormat($item->value);
 
       $elements[$delta] = [
         '#theme' => 'five_star_formatter',
-        '#raitingValue' => $output,
-        '#veeee' => 'desde views'
+        '#ratingvalue' => $item->value * 20,
+        '#attached' => array('library'=> array('day_15_creating_a_custom_field_formatter/five_star')),
       ];
     }
 

@@ -1,0 +1,4 @@
+five_star:
+  css:
+    component:
+      css/five_star.css: {}

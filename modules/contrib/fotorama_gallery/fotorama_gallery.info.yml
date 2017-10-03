@@ -1,0 +1,14 @@
+name: Fotorama Gallery
+type: module
+description: Add new format display to image field
+# core: 8.x
+package: Field formatter
+dependencies:
+  - drupal:image
+  - libraries:libraries
+
+# Information added by Drupal.org packaging script on 2017-05-30
+version: '8.x-1.3'
+core: '8.x'
+project: 'fotorama_gallery'
+datestamp: 1496112187
