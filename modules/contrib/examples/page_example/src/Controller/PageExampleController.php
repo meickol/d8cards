@@ -16,16 +16,21 @@ class PageExampleController extends ControllerBase {
 
   private $logger;
 
-    public function __construct(LoggerChannelFactoryInterface $logger) {
-        $this->logger = $logger;
-    }
+  private $eventDispatcher;
 
-    public static function create(ContainerInterface $container) {
-        $logger = $container->get('logger.factory');
-        return new static($logger);
-    }
+  public function __construct(LoggerChannelFactoryInterface $logger, $event_dispatcher) {
+    $this->logger = $logger;
+    $this->eventDispatcher = $event_dispatcher;
+  }
 
-    use DescriptionTemplateTrait;
+  public static function create(ContainerInterface $container) {
+    return new static(
+      $container->get('logger.factory'),
+      $container->get('event_dispatcher')
+    );
+  }
+
+  use DescriptionTemplateTrait;
 
   /**
    * {@inheritdoc}
@@ -45,10 +50,13 @@ class PageExampleController extends ControllerBase {
    * appropriate blocks, navigation, and styling.
    */
   public function simple() {
-      $this->logger->get('page_example_module')->notice('Simple page was displayed - Dependency injection');
-    return array(
+    $this->eventDispatcher->dispatch('simple_page_load');
+
+    $this->logger->get('page_example_module')
+      ->notice('Simple page was displayed - Dependency injection');
+    return [
       '#markup' => '<p>' . $this->t('Simple page: The quick brown fox jumps over the lazy dog.') . '</p>',
-    );
+    ];
   }
 
   /**
@@ -68,6 +76,7 @@ class PageExampleController extends ControllerBase {
    * system a chance to change it if necessary.
    *
    * Consult @link http://drupal.org/node/930760 Render Arrays documentation
+   *
    * @endlink for details.
    *
    * @param string $first
@@ -85,23 +94,19 @@ class PageExampleController extends ControllerBase {
       throw new AccessDeniedHttpException();
     }
 
-    $list[] = $this->t("First number was @number.", array('@number' => $first));
-    $list[] = $this->t("Second number was @number.", array('@number' => $second));
-    $list[] = $this->t('The total was @number.', array('@number' => $first + $second));
+    $list[] = $this->t("First number was @number.", ['@number' => $first]);
+    $list[] = $this->t("Second number was @number.", ['@number' => $second]);
+    $list[] = $this->t('The total was @number.', ['@number' => $first + $second]);
 
-    $render_array['page_example_arguments'] = array(
+    $render_array['page_example_arguments'] = [
       // The theme function to apply to the #items.
       '#theme' => 'item_list',
       // The list itself.
       '#items' => $list,
       '#title' => $this->t('Argument Information'),
-    );
+    ];
     return $render_array;
   }
-
-
-
-
 
 
 }

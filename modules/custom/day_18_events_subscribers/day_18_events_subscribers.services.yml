@@ -1,0 +1,5 @@
+services:
+  day_18_events_subscribers.config_subscriber:
+    class: Drupal\day_18_events_subscribers\SimplePageLoadSubscriber
+    tags:
+      - { name: event_subscriber }
