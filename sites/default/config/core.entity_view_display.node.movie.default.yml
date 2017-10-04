@@ -6,9 +6,11 @@ dependencies:
     - field.field.node.movie.body
     - field.field.node.movie.field_actors
     - field.field.node.movie.field_genres
+    - field.field.node.movie.field_movie_rating
     - field.field.node.movie.field_plot
     - node.type.movie
   module:
+    - day_15_creating_a_custom_field_formatter
     - text
     - user
 id: node.movie.default
@@ -39,6 +41,13 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_movie_rating:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: five_start_formatter
+    region: content
   field_plot:
     weight: 102
     label: above
@@ -49,4 +58,6 @@ content:
   links:
     weight: 100
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }

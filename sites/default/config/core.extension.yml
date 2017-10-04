@@ -13,16 +13,14 @@ module:
   contextual: 0
   datetime: 0
   day_05_drupal_8_block_system: 0
-  day_07_cron_queuing: 0
   day_08_plugin_system_text_filters: 0
-  day_13_logggin_in_d8: 0
+  day_15_creating_a_custom_field_formatter: 0
   day_3_building_configuration_forms: 0
   dblog: 0
   devel: 0
   dynamic_page_cache: 0
   editor: 0
   entity_reference_revisions: 0
-  examples: 0
   field: 0
   field_ui: 0
   file: 0
@@ -40,7 +38,6 @@ module:
   node: 0
   options: 0
   page_cache: 0
-  page_example: 0
   path: 0
   quickedit: 0
   rdf: 0

@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.movie.body
     - field.field.node.movie.field_actors
     - field.field.node.movie.field_genres
+    - field.field.node.movie.field_movie_rating
     - field.field.node.movie.field_plot
     - node.type.movie
   module:
@@ -48,6 +49,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_movie_rating:
+    weight: 35
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
     region: content
   field_plot:
     weight: 32
