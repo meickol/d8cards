@@ -13,7 +13,9 @@ module:
   contextual: 0
   datetime: 0
   day_05_drupal_8_block_system: 0
+  day_07_cron_queuing: 0
   day_08_plugin_system_text_filters: 0
+  day_13_logggin_in_d8: 0
   day_15_creating_a_custom_field_formatter: 0
   day_3_building_configuration_forms: 0
   dblog: 0
