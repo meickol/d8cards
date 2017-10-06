@@ -1,0 +1,5 @@
+services:
+  day_21_replacing_hook_init.response_subscriber_custom:
+    class: Drupal\day_21_replacing_hook_init\ResponseSubscriber
+    tags:
+      - { name: event_subscriber }
