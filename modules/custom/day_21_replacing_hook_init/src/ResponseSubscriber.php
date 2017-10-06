@@ -15,11 +15,7 @@ class ResponseSubscriber implements EventSubscriberInterface {
   public function __construct(AccountProxyInterface $current_user) {
     $this->currentUser = $current_user;
   }
-
-  public static function create(ContainerInterface $container) {
-    return new static($container->get('current_user'));
-  }
-
+  
   public static function getSubscribedEvents() {
     return [
       KernelEvents::RESPONSE => 'onResponse'
