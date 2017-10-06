@@ -7,6 +7,7 @@ use Drupal\Core\Logger\LoggerChannelFactoryInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Drupal\examples\Utility\DescriptionTemplateTrait;
+use Symfony\Component\EventDispatcher\EventDispatcherInterface
 
 /**
  * Controller routines for page example routes.
@@ -18,7 +19,7 @@ class PageExampleController extends ControllerBase {
 
   private $eventDispatcher;
 
-  public function __construct(LoggerChannelFactoryInterface $logger, $event_dispatcher) {
+  public function __construct(LoggerChannelFactoryInterface $logger, EventDispatcherInterface $event_dispatcher) {
     $this->logger = $logger;
     $this->eventDispatcher = $event_dispatcher;
   }
