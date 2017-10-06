@@ -6,7 +6,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpKernel\KernelEvents;
 use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
-use \Drupal\Core\Session\AccountProxyInterface
+use \Drupal\Core\Session\AccountProxyInterface;
 
 class ResponseSubscriber implements EventSubscriberInterface {
 
