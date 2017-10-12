@@ -1,0 +1,12 @@
+name: Day 12
+type: theme
+description: Day 12 Cards - theming
+package: D8cards
+core: 8.x
+
+base theme: stable
+
+regions:
+  sidebar1: 'Sidebar One'
+  content: Content
+  sidebar2: 'Sidebar Two'
