@@ -7,8 +7,14 @@ dependencies:
     - field.field.node.actor.body
     - node.type.actor
   module:
+    - field_layout
+    - layout_discovery
     - text
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 id: node.actor.teaser
 targetEntityType: node
 bundle: actor

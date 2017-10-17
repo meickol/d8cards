@@ -1,0 +1,22 @@
+uuid: 80bd8e28-ed9f-48bd-ae69-6440aaa37978
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - day_12
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: day_12_messages
+theme: day_12
+region: sidebar1
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

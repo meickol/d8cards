@@ -1,0 +1,20 @@
+uuid: 4c9668cf-1257-40b7-8022-01ebf75b2a9a
+langcode: en
+status: true
+dependencies:
+  theme:
+    - day_12
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: day_12_local_actions
+theme: day_12
+region: content
+weight: -9
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

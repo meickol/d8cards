@@ -1,0 +1,25 @@
+uuid: b556234c-5bca-4687-8d68-e917393b4544
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:stock_exchange_rate_card:c0b98d75-eb70-4aec-9748-ffe4d0d98b41'
+  module:
+    - block_content
+  theme:
+    - day_12
+id: day_12_bankofamerica
+theme: day_12
+region: sidebar1
+weight: 0
+provider: null
+plugin: 'block_content:c0b98d75-eb70-4aec-9748-ffe4d0d98b41'
+settings:
+  id: 'block_content:c0b98d75-eb70-4aec-9748-ffe4d0d98b41'
+  label: 'Bank of America'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -5,10 +5,20 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.movie.body
+    - field.field.node.movie.field_actors
+    - field.field.node.movie.field_genres
+    - field.field.node.movie.field_movie_rating
+    - field.field.node.movie.field_plot
     - node.type.movie
   module:
+    - field_layout
+    - layout_discovery
     - text
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 id: node.movie.teaser
 targetEntityType: node
 bundle: movie
@@ -28,4 +38,5 @@ content:
 hidden:
   field_actors: true
   field_genres: true
+  field_movie_rating: true
   field_plot: true

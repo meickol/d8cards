@@ -1,0 +1,22 @@
+uuid: 5855aa5e-9963-471d-bfe0-83b1d06ef701
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - day_12
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: day_12_powered
+theme: day_12
+region: sidebar2
+weight: -8
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

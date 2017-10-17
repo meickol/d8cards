@@ -7,8 +7,14 @@ dependencies:
     - field.field.paragraph.social_media.field_link
     - paragraphs.paragraphs_type.social_media
   module:
+    - field_layout
+    - layout_discovery
     - link
     - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 id: paragraph.social_media.default
 targetEntityType: paragraph
 bundle: social_media

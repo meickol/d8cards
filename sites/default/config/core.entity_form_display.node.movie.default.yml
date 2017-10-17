@@ -10,8 +10,14 @@ dependencies:
     - field.field.node.movie.field_plot
     - node.type.movie
   module:
+    - field_layout
+    - layout_discovery
     - path
     - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 id: node.movie.default
 targetEntityType: node
 bundle: movie

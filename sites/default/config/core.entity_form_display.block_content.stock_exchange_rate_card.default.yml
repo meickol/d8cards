@@ -8,6 +8,13 @@ dependencies:
     - field.field.block_content.stock_exchange_rate_card.field_company_name
     - field.field.block_content.stock_exchange_rate_card.field_last_price
     - field.field.block_content.stock_exchange_rate_card.field_symbol
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 id: block_content.stock_exchange_rate_card.default
 targetEntityType: block_content
 bundle: stock_exchange_rate_card

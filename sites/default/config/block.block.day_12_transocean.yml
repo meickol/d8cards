@@ -1,0 +1,25 @@
+uuid: d13b34b1-2456-419d-862e-2f226395ae58
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:stock_exchange_rate_card:0cc465f1-72e7-4dd1-ab02-61da7e72b09d'
+  module:
+    - block_content
+  theme:
+    - day_12
+id: day_12_transocean
+theme: day_12
+region: sidebar1
+weight: 0
+provider: null
+plugin: 'block_content:0cc465f1-72e7-4dd1-ab02-61da7e72b09d'
+settings:
+  id: 'block_content:0cc465f1-72e7-4dd1-ab02-61da7e72b09d'
+  label: Transocean
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

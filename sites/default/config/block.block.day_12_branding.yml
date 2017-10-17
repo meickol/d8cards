@@ -1,0 +1,25 @@
+uuid: 0a89bb2b-95a6-4d4a-9f80-0af210080889
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - day_12
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: day_12_branding
+theme: day_12
+region: sidebar1
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

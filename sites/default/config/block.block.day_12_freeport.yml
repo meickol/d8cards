@@ -1,0 +1,25 @@
+uuid: 12f2587a-181f-421f-ab1f-bd45998afd56
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:stock_exchange_rate_card:7664002b-39db-4c2e-80cd-c36524f13553'
+  module:
+    - block_content
+  theme:
+    - day_12
+id: day_12_freeport
+theme: day_12
+region: sidebar1
+weight: 0
+provider: null
+plugin: 'block_content:7664002b-39db-4c2e-80cd-c36524f13553'
+settings:
+  id: 'block_content:7664002b-39db-4c2e-80cd-c36524f13553'
+  label: Freeport
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

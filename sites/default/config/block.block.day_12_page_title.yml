@@ -1,0 +1,20 @@
+uuid: 35e77b1a-4b34-4e87-b516-4efd8f366aa2
+langcode: en
+status: true
+dependencies:
+  theme:
+    - day_12
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: day_12_page_title
+theme: day_12
+region: content
+weight: -9
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

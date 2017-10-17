@@ -10,9 +10,14 @@ dependencies:
     - field.field.node.movie.field_plot
     - node.type.movie
   module:
-    - day_15_creating_a_custom_field_formatter
+    - day_12_layout
+    - field_layout
     - text
     - user
+third_party_settings:
+  field_layout:
+    id: three_column
+    settings: {  }
 id: node.movie.default
 targetEntityType: node
 bundle: movie
@@ -21,43 +26,47 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 2
     settings: {  }
     third_party_settings: {  }
-    region: content
+    region: main
   field_actors:
-    weight: 103
+    weight: 3
     label: above
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
-    region: content
+    region: sidebar1
   field_genres:
-    weight: 104
+    weight: 4
     label: above
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
-    region: content
+    region: sidebar2
   field_movie_rating:
-    weight: 105
+    weight: 5
     label: above
-    settings: {  }
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
     third_party_settings: {  }
-    type: five_start_formatter
-    region: content
+    type: number_decimal
+    region: sidebar2
   field_plot:
-    weight: 102
+    weight: 1
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
-    region: content
+    region: main
   links:
-    weight: 100
-    region: content
+    weight: 0
+    region: main
     settings: {  }
     third_party_settings: {  }
 hidden: {  }

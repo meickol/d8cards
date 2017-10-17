@@ -1,0 +1,25 @@
+uuid: 45e78e25-ebb7-400d-9801-5cd13312aa8e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:stock_exchange_rate_card:da78a926-6762-4ccb-8a8e-34f378ffe9a3'
+  module:
+    - block_content
+  theme:
+    - day_12
+id: day_12_apple
+theme: day_12
+region: sidebar1
+weight: 0
+provider: null
+plugin: 'block_content:da78a926-6762-4ccb-8a8e-34f378ffe9a3'
+settings:
+  id: 'block_content:da78a926-6762-4ccb-8a8e-34f378ffe9a3'
+  label: Apple
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
