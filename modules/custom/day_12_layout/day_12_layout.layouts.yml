@@ -1,0 +1,12 @@
+three_column:
+  label: 'Three column'
+  category: 'Day 12 Category'
+  template: templates/three-column
+  default_region: main
+  regions:
+    main:
+      label: 'Main content'
+    sidebar1:
+      label: 'Sidebar One'
+    sidebar2:
+      label: 'Sidebar Tow'

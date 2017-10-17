@@ -1,0 +1,19 @@
+<div class="layout-module">
+    <table>
+        <tr>
+            <td>
+                {%  if content.sidebar1 %}
+                    {{ content.sidebar1 }}
+                {% endif %}
+            </td>
+            <td>
+                {{ content.main }}
+            </td>
+            <td>
+                {% if content.sidebar2 %}
+                    {{ content.sidebar2 }}
+                {% endif %}
+            </td>
+        </tr>
+    </table>
+</div>
